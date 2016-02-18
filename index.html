@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Standard Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<!-- Site Properities -->
+<title>Person Crud</title>
+
+<link rel="stylesheet" type="text/css"   href="semantic/components/reset.css">
+<link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="css/global.css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="semantic/semantic.min.js"></script>
+<script src="js/global.js"></script>
+
+</head>
+<body>
+
+   <style type="text/css">
+    
+    .cnt_login{
+      height: 100%;
+      background-color: rgb(33,133,208);
+      overflow: hidden;
+    }
+
+    .cnt_login form{
+      width: 260px;
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      margin-top: -90px;
+
+    }
+  </style>
+
+<div class="cnt_login">
+       
+        <form class="ui large form">
+          <div class="ui">
+            <div class="field">
+              <div class="ui left icon input">
+                <i class="user icon"></i>
+                <input type="text" name="email" placeholder="E-mail address">
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui left icon input">
+                <i class="lock icon"></i>
+                <input type="password" name="password" placeholder="Password">
+              </div>
+            </div>
+            <div class="ui fluid large teal submit button btn_login">Ingresar</div>
+          </div>
+
+        </form>
+
+</div>
+
+
+
+<div class="cnt_menu" style="display:none">
+
+<div class="ui top fixed menu blue inverted ">
+  <a class="item">LLAMADAS</a>
+  <a class="item active">CHATS</a>
+  <a class="item">CONTACTOS</a>
+
+  <div class="right menu">
+    <div class="ui dropdown icon item">
+      <i class="wrench icon"></i>
+      <div class="menu">
+        <div class="item btn_abrirCambiarNick" >Cambiar Nick</div>
+        <div class="item btn_logout">Cerrar sesión</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="ul_chat" class="ui relaxed divided list" >
+
+
+  <a class="item">
+    <img class="ui avatar image" src="images/wireframe/936069.jpg">
+    <div class="content">
+      <div class="header">Veronica</div>
+      Algun mensaje memorable
+    </div>
+  </a>
+  
+  <a class="item">
+    <img class="ui avatar image" src="images/wireframe/936069.jpg">
+    <div class="content">
+      <div class="header">Steve Jobes</div>
+      50 Points
+    </div>
+  </a>
+
+  <a class="item">
+    <img class="ui avatar image" src="images/wireframe/936069.jpg">
+    <div class="content">
+      <div class="header">Steve Jobes</div>
+      50 Points
+    </div>
+  </a>
+
+  <a class="item">
+    <img class="ui avatar image" src="images/wireframe/936069.jpg">
+    <div class="content">
+      <div class="header">Steve Jobes</div>
+      50 Points
+    </div>
+  </a>
+
+</div>
+
+</div>
+
+<div class="cnt_chat" style="display:none">
+  
+  <div class="ui top fixed menu teal  inverted headerChat">
+    <a class="item btn_regresar">
+      <i class="chevron left icon"></i>
+    </a>  
+    <div class="item">
+      <img class="ui avatar image" src="images/wireframe/936069.jpg">
+      <div class="content">
+        <div class="header">Veronica</div>
+      </div>
+    </div>
+    <div class="right menu">
+      <a class="item">
+        <i class="ellipsis vertical icon"></i>
+      </a>
+    </div>
+  </div>
+
+  <ol class="chat_messages">
+
+
+    <li class="other">
+      <div class="avatar"></div>
+      <div class="msg">
+        <span class="from">Edgar</span>
+        <p>Hola!</p>
+        <p>
+          Te vienes a cenar al centro?
+          <emoji class="pizza" />
+        </p>
+        <time>20:17</time>
+      </div>
+    </li>
+
+
+    <li class="self">
+      <div class="avatar"></div>
+      <div class="msg">
+        <p>Puff...</p>
+        <p>
+          Aún estoy haciendo el contexto de Góngora...
+          <emoji class="books" />
+        </p>
+        <p>Mejor otro día</p>
+        <time>20:18</time>
+      </div>
+    </li>
+
+
+
+    <div class="event">Hoy9</div>
+
+  </ol>
+
+   
+
+  <div class="ui bottom fixed menu">
+    <form id="frm_message">
+      <input id="chatMessageTextID" class="textarea" type="text" placeholder="Escribe aquí!" />
+      <input type="submit" style="visibility: hidden;" onclick="button_sendMessage()" />
+    </form>
+    <div class="emojis"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!--modal-->
+
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header">
+    NICK
+  </div>
+  <div class="content">
+    <div class="ui transparent big input" style="width:100% !important;">
+      <input  type="text" placeholder="MONKAR"   >
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui black deny button">
+      Cancelar
+    </div>
+    <div class="ui positive right labeled icon button">
+      Cambiar
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
